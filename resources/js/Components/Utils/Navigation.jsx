@@ -1,7 +1,76 @@
+import Login from "@/Pages/Auth/Login";
+import Register from "@/Pages/Auth/Register";
+import {
+    Button,
+    Navbar,
+    Tab,
+    TabPanel,
+    Tabs,
+    TabsBody,
+    TabsHeader,
+} from "@material-tailwind/react";
+import Popup from "./Popup";
+import { FaAlignLeft } from "react-icons/fa";
+import { Link } from "@inertiajs/inertia-react";
+
 export default function Navigation() {
+    const data = [
+        { title: "Sign In", value: "signin", component: <Login /> },
+        { title: "Sign Up", value: "signup", component: <Register /> },
+    ];
     return (
-        <div>
-            <div>Navigation</div>
-        </div>
+        <Navbar
+            fullWidth={true}
+            blurred={false}
+            className="rounded-none bg-primary-500 border-none"
+        >
+            <div className="container flex justify-between max-w-7xl mx-auto items-center">
+                <div className="font-bold text-lg lg:text-xl uppercase flex items-center gap-3">
+                    <button>
+                        <FaAlignLeft className="lg:hidden" />
+                    </button>
+                    <Link>topup-in</Link>
+                </div>
+                <div>
+                    <Popup
+                        activator={({ handleOpen }) => (
+                            <Button
+                                variant="text"
+                                color="white"
+                                onClick={handleOpen}
+                                className="text-lg lg:text-xl"
+                            >
+                                Sign in
+                            </Button>
+                        )}
+                    >
+                        <Tabs
+                            value="signin"
+                            className="container flex flex-col bg-white text-white p-5 rounded"
+                        >
+                            <TabsHeader>
+                                {data.map(({ title, value }) => (
+                                    <Tab key={value} value={value}>
+                                        {title}
+                                    </Tab>
+                                ))}
+                            </TabsHeader>
+                            <TabsBody
+                                animate={{
+                                    mount: { x: 0 },
+                                    unmount: { x: 250 },
+                                }}
+                            >
+                                {data.map(({ value, component }) => (
+                                    <TabPanel key={value} value={value}>
+                                        {component}
+                                    </TabPanel>
+                                ))}
+                            </TabsBody>
+                        </Tabs>
+                    </Popup>
+                </div>
+            </div>
+        </Navbar>
     );
 }

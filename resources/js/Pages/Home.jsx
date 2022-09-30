@@ -1,14 +1,10 @@
-export default function Home({
-    phpVersion,
-    laravelVersion,
-    canLogin,
-    canRegister,
-}) {
+import HomeContent from "@/Components/Home/HomeContent";
+import Guest from "@/Layouts/GuestLayout";
+
+export default function Home({ phpVersion, laravelVersion }) {
     return (
-        <>
-            <div>Ini rumah</div>
-            <div>{laravelVersion}</div>
-            <div>{phpVersion}</div>
-        </>
+        <Guest>
+            <HomeContent />
+        </Guest>
     );
 }

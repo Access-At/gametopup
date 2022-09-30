@@ -1,8 +1,12 @@
+import Footer from "@/Components/Utils/Footer";
+import Navigation from "@/Components/Utils/Navigation";
+
 export default function Guest({ children }) {
     return (
-        <div className="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-            <div>Ini Layout Guest</div>
+        <>
+            <Navigation />
             <div>{children}</div>
-        </div>
+            <Footer />
+        </>
     );
 }
