@@ -1,36 +1,26 @@
-import { Navigation, EffectFade } from "swiper";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
+import { Swiper } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/effect-fade";
+import "swiper/css/pagination";
 
-export default function Carousel({ images }) {
+export default function Carousel({ children }) {
     return (
         <Swiper
-            modules={[Navigation, EffectFade]}
-            navigation={true}
-            // spaceBetween={50}
-            // slidesPerView={1}
-            // pagination={{ clickable: true }}
-            // scrollbar={{ draggable: true }}
-            // onSwiper={(swiper) => console.log(swiper)}
-            // onSlideChange={() => console.log("slide change")}
-            effect="fade"
+            modules={[Autoplay, Navigation, Pagination]}
+            slidesPerView={1}
+            loop={true}
+            pagination
+            navigation
+            autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+            }}
+            onSwiper={(swiper) => swiper}
+            scrollbar={{ draggable: true }}
         >
-            {images.map((image, i) => {
-                return (
-                    <SwiperSlide key={i}>
-                        <img
-                            className="object-fill w-full h-96"
-                            src={image}
-                            alt={`image slide ${i + 1}`}
-                        />
-                    </SwiperSlide>
-                );
-            })}
+            {/* Carousel Wrapper */}
+            {children}
         </Swiper>
     );
 }

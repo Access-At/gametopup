@@ -5,7 +5,7 @@ export default function Guest({ children }) {
     return (
         <>
             <Navigation />
-            <div>{children}</div>
+            {children}
             <Footer />
         </>
     );
