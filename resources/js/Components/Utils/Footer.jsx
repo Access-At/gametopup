@@ -19,14 +19,14 @@ export default function Footer() {
                     <Typography variant="lead" className="font-medium">
                         Other Links
                     </Typography>
-                    <Typography variant="paragraph" className="font-medium">
-                        <ul className="capitalize">
+                    <ul className="capitalize">
+                        <Typography variant="paragraph" className="font-medium">
                             <li>about store</li>
                             <li className="uppercase">faq</li>
                             <li>Payment method</li>
                             <li>term of service</li>
-                        </ul>
-                    </Typography>
+                        </Typography>
+                    </ul>
                 </div>
                 <div className="flex flex-col gap-y-1 md:max-w-xs xl:max-w-xl">
                     <Typography

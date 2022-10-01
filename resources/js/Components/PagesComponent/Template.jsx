@@ -1,3 +1,6 @@
-export default function Template() {
-  return(<></>)
+export default function Template({ children }) {
+  return (
+    <main className="lg:w-10/12 w-full">
+      {children}
+    </main>)
 }

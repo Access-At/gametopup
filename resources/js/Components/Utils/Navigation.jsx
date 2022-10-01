@@ -12,6 +12,7 @@ import {
 import Popup from "./Popup";
 import { FaAlignLeft } from "react-icons/fa";
 import { Link } from "@inertiajs/inertia-react";
+import Sidebar from "../PagesComponent/Sidebar";
 
 export default function Navigation() {
     const data = [
@@ -26,9 +27,16 @@ export default function Navigation() {
         >
             <div className="container flex justify-between max-w-7xl mx-auto items-center">
                 <div className="font-bold text-lg lg:text-xl uppercase flex items-center gap-3">
-                    <button className="lg:hidden block">
-                        <FaAlignLeft />
-                    </button>
+                    <Sidebar
+                        activator={({ setIsOpen }) => (
+                            <button
+                                className="lg:hidden block"
+                                onClick={() => setIsOpen(true)}
+                            >
+                                <FaAlignLeft />
+                            </button>
+                        )}
+                    />
                     <Link className="lg:text-2xl text-lg">topup-in</Link>
                 </div>
                 <div>
