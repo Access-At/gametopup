@@ -6,3 +6,23 @@
 body {
     background-color: #e2e3e3;
 }
+
+@layer components {
+
+    /* max-w-7xl */
+    .max7xl{
+        @apply container flex max-w-7xl mx-auto px-3 my-5
+    }
+    /* max-w-7xl */
+    .flex-cols {
+        @apply flex flex-col
+    }
+    /* card anymore */
+    .card{
+        @apply bg-white rounded-sm p-4
+    }
+    /* .card-menus-side{
+    
+    } */
+    /* end card */
+}

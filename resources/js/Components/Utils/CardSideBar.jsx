@@ -8,7 +8,7 @@ export default function CardSidebar({ title, icon, active = false }) {
     return (
         <>
             <Card
-                className={`rounded-sm w-40 my-2 ${
+                className={`rounded-sm w-40 mb-2 ${
                     !active && "cursor-pointer"
                 }`}
             >

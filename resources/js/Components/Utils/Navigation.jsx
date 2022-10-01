@@ -22,14 +22,14 @@ export default function Navigation() {
         <Navbar
             fullWidth={true}
             blurred={false}
-            className="rounded-none bg-primary-500 border-none"
+            className="rounded-none bg-primary-500 sticky top-0 z-10"
         >
             <div className="container flex justify-between max-w-7xl mx-auto items-center">
                 <div className="font-bold text-lg lg:text-xl uppercase flex items-center gap-3">
-                    <button>
-                        <FaAlignLeft className="lg:hidden" />
+                    <button className="lg:hidden block">
+                        <FaAlignLeft />
                     </button>
-                    <Link>topup-in</Link>
+                    <Link className="lg:text-2xl text-lg">topup-in</Link>
                 </div>
                 <div>
                     <Popup
@@ -38,7 +38,7 @@ export default function Navigation() {
                                 variant="text"
                                 color="white"
                                 onClick={handleOpen}
-                                className="text-lg lg:text-xl"
+                                className="text-lg lg:text-2xl"
                             >
                                 Sign in
                             </Button>

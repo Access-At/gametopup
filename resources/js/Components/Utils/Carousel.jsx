@@ -9,8 +9,7 @@ export default function Carousel({ children }) {
         <Swiper
             modules={[Autoplay, Navigation, Pagination]}
             slidesPerView={1}
-            loop={true}
-            pagination
+            loop={false}
             navigation
             autoplay={{
                 delay: 2000,
