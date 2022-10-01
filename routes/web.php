@@ -5,6 +5,10 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+// TODO: Make routes for price, check order, about store, other page[FAQ], other page[Payment]
+// TODO: Make routes for TopupGame Detail
+// TODO: Make routes on authentication for dashboard User, Transaction User, Settings User, About Store User
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,7 +32,7 @@ use Inertia\Inertia;
 Route::get('/', [HomepageController::class, 'homepage']);
 
 Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
+  return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
