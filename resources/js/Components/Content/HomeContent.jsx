@@ -13,8 +13,8 @@ import CardContent from "@/Components/Utils/Card"
 
 export default function HomeContent() {
   const images = [
-    "https://cdn.pixabay.com/photo/2022/03/20/15/40/nature-7081138__340.jpg",
-    "https://cdn.pixabay.com/photo/2022/07/24/17/55/wind-energy-7342177__340.jpg",
+    "https://xinnstore.com/assets/img/banner//741491675566558.png",
+    "https://xinnstore.com/assets/img/banner//741491675566558.png",
     "https://xinnstore.com/assets/img/banner//741491675566558.png",
   ];
 
