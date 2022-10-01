@@ -2,7 +2,7 @@ import { Typography } from "@material-tailwind/react";
 
 export default function Footer() {
     return (
-        <div className="bg-primary-500 text-white fixed bottom-0 w-full">
+        <div className="bg-primary-500 text-white mt-5">
             <div className="flex flex-col container mx-auto max-w-7xl md:flex-row md:justify-between md:gap-10 lg:gap-x-20 p-5 gap-y-3 divide-y divide-primary-900 md:divide-y-0">
                 <div className="flex flex-col gap-y-1 md:max-w-xs xl:max-w-xl">
                     <Typography variant="h4" className="uppercase">
