@@ -14,7 +14,7 @@ body {
         @apply container flex max-w-7xl mx-auto px-3 my-5
     }
     /* max-w-7xl */
-    .flex-cols {
+    .flexCol {
         @apply flex flex-col
     }
     /* card anymore */
@@ -23,11 +23,11 @@ body {
     }
 
     /* navbar menu bottom active */
-    .navbar_menu_bottom_active{
+    .navbarMenuBottomActive{
         @apply text-primary-500 flex flex-col items-center md:text-sm text-xs
     }
     /* navbar menu bottom non-active */
-    .navbar_menu_bottom_non_active{ 
+    .navbarMenuBottomNonActive{ 
         @apply hover:text-primary-50 flex flex-col items-center md:text-sm text-xs
     }
 
