@@ -1,6 +1,12 @@
 import { Button, Input } from "@material-tailwind/react";
 
 export default function Register() {
+
+    // const handleSubmit = ( e ) => {
+    //     e.preventDefault()
+
+    //     Inertia.post(route('user.register'))
+    // }
     return (
         <form className="flex flex-col gap-3 w-full">
             <Input

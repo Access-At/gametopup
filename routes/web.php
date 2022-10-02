@@ -6,6 +6,7 @@ use App\Http\Controllers\Homepage\{
   HomepageController,
   PriceController
 };
+use App\Http\Controllers\Users\AuthController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -37,8 +38,9 @@ use Inertia\Inertia;
 //route move to routes->homepage->homepage.php
 require 'homepage/homepage.php';
 
-Route::get('/dashboard', function () {
-  return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/register', [AuthController::class, 'register'])->name('user.register');
+// Route::get('/dashboard', function () {
+//   return Inertia::render('Dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
