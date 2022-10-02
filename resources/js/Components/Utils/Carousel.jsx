@@ -1,13 +1,13 @@
 import { Swiper } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper";
+import { Autoplay, Navigation, Lazy } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
+import "swiper/css/lazy";
 
 export default function Carousel({ children }) {
     return (
         <Swiper
-            modules={[Autoplay, Navigation, Pagination]}
+            modules={[Autoplay, Navigation, Lazy]}
             slidesPerView={1}
             loop={false}
             navigation
