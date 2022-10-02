@@ -21,4 +21,28 @@ body {
     .card{
         @apply bg-white rounded-sm p-4
     }
+
+    /* navbar menu bottom active */
+    .navbar_menu_bottom_active{
+        @apply text-primary-500 flex flex-col items-center md:text-sm text-xs
+    }
+    /* navbar menu bottom non-active */
+    .navbar_menu_bottom_non_active{ 
+        @apply hover:text-primary-50 flex flex-col items-center md:text-sm text-xs
+    }
+
+    /* customize font here */
+    .font5xl{
+        @apply text-base md:text-3xl lg:text-5xl
+    }
+    .font4xl{
+        @apply text-base md:text-2xl lg:text-4xl
+    }
+    .font3xl{
+        @apply text-sm md:text-xl lg:text-3xl
+    }
+    .font2xl{
+        @apply text-sm md:text-base lg:text-2xl
+    }
+    /* end font here */
 }

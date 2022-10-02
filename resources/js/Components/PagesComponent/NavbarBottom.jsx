@@ -7,24 +7,24 @@ export default function NavbarBottom() {
     return (
         <div className="bg-secondry-600 sticky bottom-0 p-2 block lg:hidden">
             <div className="flex justify-between text-2xl md:mx-12 mx-4">
-                <div className="text-primary-500 flex flex-col items-center md:text-sm text-xs">
-                    <FaHome className="text-base md:text-2xl" />
+                <div className="navbar_menu_bottom_active">
+                    <FaHome className="font2xl" />
                     Home
                 </div>
-                <div className="flex flex-col items-center md:text-sm text-xs">
-                    <MdOutlinePriceChange className="text-base md:text-2xl" />
+                <div className="navbar_menu_bottom_non_active">
+                    <MdOutlinePriceChange className="font2xl" />
                     Price
                 </div>
-                <div className="flex flex-col items-center md:text-sm text-xs">
-                    <FaSearchDollar className="text-base md:text-2xl" />
+                <div className="navbar_menu_bottom_non_active">
+                    <FaSearchDollar className="font2xl" />
                     Check Order
                 </div>
-                <div className="flex flex-col items-center md:text-sm text-xs">
-                    <BsCreditCard2Front className="text-base md:text-2xl" />
+                <div className="navbar_menu_bottom_non_active">
+                    <BsCreditCard2Front className="font2xl" />
                     About Store
                 </div>
-                <div className="flex flex-col items-center md:text-sm text-xs">
-                    <TbQuestionMark className="text-base md:text-2xl" />
+                <div className="navbar_menu_bottom_non_active">
+                    <TbQuestionMark className="font2xl" />
                     Other
                 </div>
             </div>
