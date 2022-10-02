@@ -1,6 +1,11 @@
 <?php
 
-use App\Http\Controllers\Homepage\HomepageController;
+use App\Http\Controllers\Homepage\{
+  AboutStoreController,
+  CheckOrderController,
+  HomepageController,
+  PriceController
+};
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -29,7 +34,8 @@ use Inertia\Inertia;
 //     // ]);
 // });
 
-Route::get('/', [HomepageController::class, 'homepage']);
+//route move to routes->homepage->homepage.php
+require 'homepage/homepage.php';
 
 Route::get('/dashboard', function () {
   return Inertia::render('Dashboard');
