@@ -45,6 +45,12 @@ export default function HomeContent() {
             <CardContent />
             <CardContent />
             <CardContent />
+            <CardContent />
+            <CardContent />
+            <CardContent />
+            <CardContent />
+            <CardContent />
+            <CardContent />
           </div>
         </div>
       </section>

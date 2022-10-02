@@ -23,7 +23,7 @@ export default function Price() {
             <Input label="Search" icon={<FaSearch />} />
           </div>
           <div>
-            <div className="bg-white h-screen w-full"></div>
+            <div className="bg-white h-[36rem] w-full"></div>
           </div>
         </section>
 

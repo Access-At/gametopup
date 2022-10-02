@@ -7,7 +7,6 @@ use App\Http\Controllers\Homepage\{
   PriceController
 };
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
 Route::get('/', [HomepageController::class, 'homepage'])->name("home");
 Route::get('/price', [PriceController::class, 'price'])->name("price");

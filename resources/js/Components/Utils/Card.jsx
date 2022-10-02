@@ -12,11 +12,11 @@ export default function CardContent() {
   return (
     <div className="card">
       <CardHeader
-        color="blue"
+        color="gray"
         className="relative h-56"
       >
         <img
-          src="https://www.material-tailwind.com/_next/image?url=%2Fimg%2Fblog.jpg&w=3840&q=75"
+          src="https://via.placeholder.com/3840x1750"
           alt="img-blur-shadow"
           className="h-full w-full"
         />
