@@ -8,7 +8,7 @@ export default function NavbarBottom() {
   const { url } = usePage()
 
   return (
-    <div className="bg-secondry-600 sticky bottom-0 p-2 block lg:hidden">
+    <div className="bg-secondry-600 fixed w-full bottom-0 p-2 block lg:hidden">
       <div className="flex justify-between text-2xl md:mx-12 mx-4">
         <Link href={route('home')} className={url === '/' ? "navbarMenuBottomActive" : "navbarMenuBottomNonActive"}>
           <FaHome className="font2xl" />

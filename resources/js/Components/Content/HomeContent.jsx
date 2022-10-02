@@ -15,8 +15,6 @@ export default function HomeContent() {
     "https://via.placeholder.com/1024x528",
   ];
 
-  // const images = ["satu", "dua", "tiga"];
-
   //className => resources->css->app.css
   return (
     <ContentTemplate>
