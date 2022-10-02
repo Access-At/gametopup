@@ -13,6 +13,14 @@ export default function Register() {
   const handleSubmit = (e) => {
     e.preventDefault()
     post('/register/user')
+
+    setData({
+      fullname: "",
+      username: "",
+      email: "",
+      password: "",
+      phone_number: "",
+    })
   }
 
   return (

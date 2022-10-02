@@ -17,6 +17,9 @@ class User extends Authenticatable
    *
    * @var array<int, string>
    */
+
+
+  // TODO kasih hash password
   protected $fillable = [
     'fullname',
     'username',
