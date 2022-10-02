@@ -9,7 +9,7 @@ use App\Http\Controllers\Homepage\{
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::get('/', [HomepageController::class, 'homepage']);
-Route::get('/price', [PriceController::class, 'price']);
-Route::get('/check-invoice', [CheckOrderController::class, 'checkInvoice']);
-Route::get('/about-store', [AboutStoreController::class, 'aboutStore']);
+Route::get('/', [HomepageController::class, 'homepage'])->name("home");
+Route::get('/price', [PriceController::class, 'price'])->name("price");
+Route::get('/check-invoice', [CheckOrderController::class, 'checkInvoice'])->name("invoice");
+Route::get('/about-store', [AboutStoreController::class, 'aboutStore'])->name("about");

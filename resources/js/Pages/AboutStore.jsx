@@ -1,10 +1,10 @@
-import HomeContent from "@/Components/Content/HomeContent";
+import AboutStoreContent from "@/Components/Content/AboutStoreContent";
 import Guest from "@/Layouts/GuestLayout";
 
 export default function AboutStore() {
-    return (
-        <Guest>
-            <HomeContent />
-        </Guest>
-    );
+  return (
+    <Guest>
+      <AboutStoreContent />
+    </Guest>
+  );
 }

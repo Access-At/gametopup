@@ -10,7 +10,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-// TODO: Make routes for price, check order, about store, other page[FAQ], other page[Payment]
+// TODO: Make routes for other page[FAQ], other page[Payment]
 // TODO: Make routes for TopupGame Detail
 // TODO: Make routes on authentication for dashboard User, Transaction User, Settings User, About Store User
 

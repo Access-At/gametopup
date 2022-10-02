@@ -1,10 +1,10 @@
-import HomeContent from "@/Components/Content/HomeContent";
+import CheckOrderContent from "@/Components/Content/CheckOrderContent";
 import Guest from "@/Layouts/GuestLayout";
 
 export default function CheckOrder() {
-    return (
-        <Guest>
-            <HomeContent />
-        </Guest>
-    );
+  return (
+    <Guest>
+      <CheckOrderContent />
+    </Guest>
+  );
 }
