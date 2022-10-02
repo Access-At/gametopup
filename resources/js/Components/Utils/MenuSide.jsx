@@ -2,9 +2,11 @@ import { FaHome, FaSearchDollar, FaTimes } from "react-icons/fa";
 import { MdOutlinePriceChange } from "react-icons/md";
 import { BsCreditCard2Front } from "react-icons/bs";
 import { TbQuestionMark } from "react-icons/tb";
-import { Link } from "@inertiajs/inertia-react";
+import { Link, usePage } from "@inertiajs/inertia-react";
+
 
 export default function MenuSide({ setIsOpen }) {
+  const { url } = usePage()
   return (
     <>
       <button
