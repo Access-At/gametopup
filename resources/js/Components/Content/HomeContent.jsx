@@ -5,9 +5,8 @@ import { Typography } from "@material-tailwind/react";
 
 import { Input } from "@material-tailwind/react";
 import { SwiperSlide } from "swiper/react";
-import SidebarMenu from "../PagesComponent/SidebarMenu";
-import Template from "../PagesComponent/Template";
 import CardContent from "@/Components/Utils/Card";
+import PageTemplate from "./PageTemplate";
 
 export default function HomeContent() {
     const images = [
@@ -20,13 +19,8 @@ export default function HomeContent() {
 
     //className => resources->css->app.css
     return (
-        <div className="max7xl">
-            {/* sidebar */}
-            <SidebarMenu />
-            {/* content */}
-            {/* dibagain sini udh semua isi content */} {/* OK !!! */}
-            <Template>
-                <Carousel>
+        <PageTemplate>
+            <Carousel>
                     {images.map((image, i) => (
                         <SwiperSlide key={i}>
                             <img
@@ -56,7 +50,6 @@ export default function HomeContent() {
                         </div>
                     </div>
                 </section>
-            </Template>
-        </div>
+        </PageTemplate>
     );
 }
