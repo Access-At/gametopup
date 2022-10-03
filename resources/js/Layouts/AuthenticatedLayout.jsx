@@ -1,8 +1,12 @@
+import Footer from "@/Components/Utils/Footer";
+import Navigation from "@/Components/Utils/Navigation";
+
 export default function Authenticated({ children }) {
     return (
-        <div className="min-h-screen bg-gray-100">
-            <div>Ini Layout Auth</div>
-            <div>{children}</div>
-        </div>
+        <>
+            <Navigation Auth={true} />
+            {children}
+            <Footer Auth={true} />
+        </>
     );
 }

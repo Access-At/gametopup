@@ -1,7 +1,10 @@
+import OtherPageContent from "@/Components/Content/OtherPageContent";
+import Guest from "@/Layouts/GuestLayout";
+
 export default function Other() {
     return (
-        <div>
-            <div>Ohter</div>
-        </div>
+        <Guest>
+            <OtherPageContent />
+        </Guest>
     );
 }

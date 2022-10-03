@@ -18,6 +18,6 @@ class AuthController extends Controller
   public function login(LoginRequest $request)
   {
     (new AuthRepo)->getLogin($request);
-    return redirect()->route('/dashboard/user');
+    return to_route('users.dashboard');
   }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controller\Homepage;
+namespace App\Http\Controllers\Homepage;
 
 use App\Http\Controllers\Controller;
 use Inertia\Inertia;

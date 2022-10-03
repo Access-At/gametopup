@@ -1,7 +1,10 @@
+import UserContent from "@/Components/Dashboard/User/UserContent";
+import Auth from "@/Layouts/AuthenticatedLayout";
+
 export default function DashboardUser() {
     return (
-        <div>
-            <div>Dashboard User</div>
-        </div>
+        <Auth>
+            <UserContent />
+        </Auth>
     );
 }

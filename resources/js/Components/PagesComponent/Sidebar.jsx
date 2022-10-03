@@ -2,7 +2,7 @@ import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import MenuSide from "../Utils/MenuSide";
 
-export default function Sidebar({ activator }) {
+export default function Sidebar({ activator, Auth }) {
     const [isOpen, setIsOpen] = useState(false);
 
     const content = isOpen && (
@@ -35,7 +35,7 @@ export default function Sidebar({ activator }) {
                         leaveTo="opacity-0 -translate-x-8"
                     >
                         <Dialog.Panel className="relative rounded-sm sm:bg-primary-500 px-5 w-full text-white sm:max-w-md">
-                            <MenuSide setIsOpen={setIsOpen} />
+                            <MenuSide setIsOpen={setIsOpen} Auth={Auth} />
                         </Dialog.Panel>
                     </Transition.Child>
                 </div>

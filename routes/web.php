@@ -37,6 +37,7 @@ use Inertia\Inertia;
 
 //route move to routes->homepage->homepage.php
 require 'homepage/homepage.php';
+require "dashboard/dashboardUser.php";
 
 Route::post('/register/user', [AuthController::class, 'register'])->name('users.register');
 Route::post('/login/user', [AuthController::class, 'login'])->name('users.login');
