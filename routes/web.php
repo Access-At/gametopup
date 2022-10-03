@@ -38,7 +38,8 @@ use Inertia\Inertia;
 //route move to routes->homepage->homepage.php
 require 'homepage/homepage.php';
 
-Route::post('/register/user', [AuthController::class, 'register']);
+Route::post('/register/user', [AuthController::class, 'register'])->name('users.register');
+Route::post('/login/user', [AuthController::class, 'login'])->name('users.login');
 // Route::get('/dashboard', function () {
 //   return Inertia::render('Dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');

@@ -11,8 +11,6 @@ class OtherPageController extends Controller{
   //example get data from repo to controller :
   //(new NameRepo)->namefunction(params ? "params" : null )
   public function OtherPage(){
-    return Inertia::render(
-      'OtherPage'
-    );
+    return Inertia::render('Other');
   }
 }
