@@ -12,16 +12,12 @@ class AuthController extends Controller
 {
   public function register(RegisterRequest $request)
   {
-    // $validate = $request->validated();
-    // User::create(
-    //   $validate
-    // );
-    // return back();
     return (new AuthRepo)->createRegister($request);
   }
 
   public function login(LoginRequest $request)
   {
-    return (new AuthRepo)->getLogin($request);
+    (new AuthRepo)->getLogin($request);
+    return redirect()->route('/dashboard/user');
   }
 }

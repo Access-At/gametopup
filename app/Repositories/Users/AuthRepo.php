@@ -17,6 +17,6 @@ class AuthRepo
   public function getLogin($params)
   {
     $validate = $params->validated();
-    return User::where('email', $validate['email'])->get();
+    return User::where('email', $validate['email'])->first();
   }
 }
