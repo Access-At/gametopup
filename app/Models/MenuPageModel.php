@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class MenuPageModel extends Model
 {
     use HasFactory;
+
+    protected $table = 'menu_page';
+    protected $guarded = ['id'];
 }

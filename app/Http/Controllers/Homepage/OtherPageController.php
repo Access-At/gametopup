@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers\Homepage;
 
-use App\Http\Controllers\Controller;
 use Inertia\Inertia;
+use App\Models\MenuPageModel;
+use App\Http\Controllers\Controller;
 
-class OtherPageController extends Controller{
+class OtherPageController extends Controller
+{
   //todo multiple dinamis page in otherpage
-  //
-  //example get data from repo to controller :
-  //(new NameRepo)->namefunction(params ? "params" : null )
-  public function OtherPage(){
-    return Inertia::render('Other');
+  public function OtherPage()
+  {
+    $menuPage = MenuPageModel::get();
+    return Inertia::render('Other', compact($menuPage));
   }
 }
