@@ -12,6 +12,8 @@ class OtherPageController extends Controller
   public function OtherPage()
   {
     $menuPage = MenuPageModel::get();
-    return Inertia::render('Other', compact($menuPage));
+    return Inertia::render('Other', [
+      'menu' => MenuPageModel::get(),
+    ]);
   }
 }
