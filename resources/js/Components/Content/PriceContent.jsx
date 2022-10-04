@@ -16,12 +16,7 @@ export default function Price({ Auth }) {
                             className="bg-white text-primary-500"
                         />
                     </Link>
-                    <Link>
-                        <Chip
-                            value="Price"
-                            className="bg-primary-500 text-white"
-                        />
-                    </Link>
+                    <Chip value="Price" className="bg-primary-500 text-white" />
                 </div>
 
                 <section className="flex flex-col gap-5">

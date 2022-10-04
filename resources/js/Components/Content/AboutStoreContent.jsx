@@ -16,12 +16,10 @@ export default function AboutStoreContent({ Auth }) {
                             className="bg-white text-primary-500"
                         />
                     </Link>
-                    <Link>
-                        <Chip
-                            value="About Store"
-                            className="bg-primary-500 text-white"
-                        />
-                    </Link>
+                    <Chip
+                        value="About Store"
+                        className="bg-primary-500 text-white"
+                    />
                 </div>
                 <div className="bg-white h-[39rem] w-full p-5 flex flex-col gap-4  overflow-y-auto">
                     <AboutType title="What is Lorem Ipsum?">

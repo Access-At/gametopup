@@ -17,12 +17,10 @@ export default function CheckOrderContent({ Auth }) {
                             className="bg-white text-primary-500"
                         />
                     </Link>
-                    <Link>
-                        <Chip
-                            value="Check Order"
-                            className="bg-primary-500 text-white"
-                        />
-                    </Link>
+                    <Chip
+                        value="Check Order"
+                        className="bg-primary-500 text-white"
+                    />
                 </div>
 
                 <section className="flex flex-col gap-5">
