@@ -12,6 +12,14 @@ import { Link, usePage } from "@inertiajs/inertia-react";
 
 export default function MenuSide({ setIsOpen, Auth }) {
     const { url } = usePage();
+
+    const urlList = ["/", "/price", "/check-invoice", "/about-store", "/other"];
+    const urlListDashboard = [
+        "/dashboard/user",
+        "/dashboard/user/transaction",
+        "/dashboard/user/settings",
+    ];
+
     return (
         <>
             <button
@@ -20,7 +28,7 @@ export default function MenuSide({ setIsOpen, Auth }) {
             >
                 <FaTimes className="text-white h-5 w-5" />
             </button>
-            {!Auth && (
+            {Auth !== null && urlList.includes(url) && (
                 <div className="flex flex-col gap-3 mr-3 sticky top-20">
                     <Link
                         href={route("home")}
@@ -83,52 +91,56 @@ export default function MenuSide({ setIsOpen, Auth }) {
                     </Link>
                 </div>
             )}
-            <div className="flex flex-col gap-3 mr-3 sticky top-20">
-                <Link
-                    href={route("users.dashboard")}
-                    className={`${
-                        url === "/dashboard/user"
-                            ? "bg-primary-500 p-2 sm:bg-secondry-500 sm:text-primary-500"
-                            : ""
-                    } flex items-center gap-2`}
-                >
-                    <MdSpaceDashboard className="font2xl" />
-                    <span className="font-semibold text-lg">Dashboard</span>
-                </Link>
-                <Link
-                    href={route("users.transaction")}
-                    className={`${
-                        url === "/dashboard/user/transaction"
-                            ? "bg-primary-500 p-2 sm:bg-secondry-500 sm:text-primary-500"
-                            : ""
-                    } flex items-center gap-2`}
-                >
-                    <MdOutlinePriceChange className="font2xl" />
-                    <span className="font-semibold text-lg">Transaction</span>
-                </Link>
-                <Link
-                    href={route("users.settings")}
-                    className={`${
-                        url === "/dashboard/user/settings"
-                            ? "bg-primary-500 p-2 sm:bg-secondry-500 sm:text-primary-500"
-                            : ""
-                    } flex items-center gap-2`}
-                >
-                    <FaUserCog className="font2xl" />
-                    <span className="font-semibold text-lg">Settings</span>
-                </Link>
-                <Link
-                    href={route("home")}
-                    className={`${
-                        url === "/"
-                            ? "bg-primary-500 p-2 sm:bg-secondry-500 sm:text-primary-500"
-                            : ""
-                    } flex items-center gap-2`}
-                >
-                    <FaArrowLeft className="font2xl" />
-                    <span className="font-semibold text-lg">Back Home</span>
-                </Link>
-            </div>
+            {Auth.user !== null && urlListDashboard.includes(url) && (
+                <div className="flex flex-col gap-3 mr-3 sticky top-20">
+                    <Link
+                        href={route("users.dashboard")}
+                        className={`${
+                            url === "/dashboard/user"
+                                ? "bg-primary-500 p-2 sm:bg-secondry-500 sm:text-primary-500"
+                                : ""
+                        } flex items-center gap-2`}
+                    >
+                        <MdSpaceDashboard className="font2xl" />
+                        <span className="font-semibold text-lg">Dashboard</span>
+                    </Link>
+                    <Link
+                        href={route("users.transaction")}
+                        className={`${
+                            url === "/dashboard/user/transaction"
+                                ? "bg-primary-500 p-2 sm:bg-secondry-500 sm:text-primary-500"
+                                : ""
+                        } flex items-center gap-2`}
+                    >
+                        <MdOutlinePriceChange className="font2xl" />
+                        <span className="font-semibold text-lg">
+                            Transaction
+                        </span>
+                    </Link>
+                    <Link
+                        href={route("users.settings")}
+                        className={`${
+                            url === "/dashboard/user/settings"
+                                ? "bg-primary-500 p-2 sm:bg-secondry-500 sm:text-primary-500"
+                                : ""
+                        } flex items-center gap-2`}
+                    >
+                        <FaUserCog className="font2xl" />
+                        <span className="font-semibold text-lg">Settings</span>
+                    </Link>
+                    <Link
+                        href={route("home")}
+                        className={`${
+                            url === "/"
+                                ? "bg-primary-500 p-2 sm:bg-secondry-500 sm:text-primary-500"
+                                : ""
+                        } flex items-center gap-2`}
+                    >
+                        <FaArrowLeft className="font2xl" />
+                        <span className="font-semibold text-lg">Back Home</span>
+                    </Link>
+                </div>
+            )}
         </>
     );
 }

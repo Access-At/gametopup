@@ -1,9 +1,9 @@
 import ContentTemplate from "@/Components/PagesComponent/ContentTemplate";
 import TransactionCard from "@/Components/PagesComponent/TransactionCard";
 
-export default function TransactionUserContent() {
+export default function TransactionUserContent({ Auth }) {
     return (
-        <ContentTemplate Auth={true}>
+        <ContentTemplate Auth={Auth}>
             <div className="flex flex-col">
                 <div className="bg-primary-500 text-white rounded-t p-4">
                     Your Transaction Purchase

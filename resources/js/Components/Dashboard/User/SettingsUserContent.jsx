@@ -1,8 +1,8 @@
 import ContentTemplate from "@/Components/PagesComponent/ContentTemplate";
 
-export default function SettingsUserContent() {
+export default function SettingsUserContent({ Auth }) {
     return (
-        <ContentTemplate Auth={true}>
+        <ContentTemplate Auth={Auth}>
             <div className="flex flex-col">
                 <div className="bg-primary-500 text-white rounded-t p-4">
                     Edit Data User

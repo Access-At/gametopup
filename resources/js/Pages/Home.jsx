@@ -1,10 +1,10 @@
 import HomeContent from "@/Components/Content/HomeContent";
 import Guest from "@/Layouts/GuestLayout";
 
-export default function Home() {
+export default function Home({ auth }) {
     return (
-        <Guest>
-            <HomeContent />
+        <Guest auth={auth}>
+            <HomeContent Auth={auth} />
         </Guest>
     );
 }

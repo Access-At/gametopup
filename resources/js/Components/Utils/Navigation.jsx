@@ -11,14 +11,23 @@ import {
 } from "@material-tailwind/react";
 import Popup from "./Popup";
 import { FaAlignLeft } from "react-icons/fa";
-import { Link } from "@inertiajs/inertia-react";
+import { Link, usePage } from "@inertiajs/inertia-react";
 import Sidebar from "../PagesComponent/Sidebar";
 
 export default function Navigation({ Auth }) {
+    const { url } = usePage();
     const data = [
         { title: "Sign In", value: "signin", component: <Login /> },
         { title: "Sign Up", value: "signup", component: <Register /> },
     ];
+
+    const urlList = ["/", "/price", "/check-invoice", "/about-store", "/other"];
+    const urlListDashboard = [
+        "/dashboard/user",
+        "/dashboard/user/transaction",
+        "/dashboard/user/settings",
+    ];
+
     return (
         <Navbar
             fullWidth={true}
@@ -40,7 +49,8 @@ export default function Navigation({ Auth }) {
                     />
                     <Link className="lg:text-2xl text-lg">topup-in</Link>
                 </div>
-                {!Auth && (
+
+                {Auth.user === null && (
                     <div>
                         <Popup
                             activator={({ handleOpen }) => (
@@ -81,14 +91,29 @@ export default function Navigation({ Auth }) {
                         </Popup>
                     </div>
                 )}
-                {Auth && (
-                    <Button
-                        variant="text"
-                        color="white"
-                        className="text-lg lg:text-2xl"
-                    >
-                        Logout
-                    </Button>
+
+                {Auth.user !== null && urlList.includes(url) && (
+                    <Link href={route("users.dashboard")} method="get">
+                        <Button
+                            variant="text"
+                            color="white"
+                            className="text-lg lg:text-2xl"
+                        >
+                            Dashboard
+                        </Button>
+                    </Link>
+                )}
+
+                {Auth.user !== null && urlListDashboard.includes(url) && (
+                    <Link href={route("logout")} method="post">
+                        <Button
+                            variant="text"
+                            color="white"
+                            className="text-lg lg:text-2xl"
+                        >
+                            Logout
+                        </Button>
+                    </Link>
                 )}
             </div>
         </Navbar>

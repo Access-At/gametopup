@@ -19,7 +19,7 @@ class AuthRepo
   {
     $params->authenticate();
     $user = User::find(auth()->user()->id);
-    $user->token_random = Str::random(50);
+    $user->token_random = Str::random(20);
     $user->save();
 
     $params->session()->regenerate();

@@ -1,12 +1,12 @@
 import Footer from "@/Components/Utils/Footer";
 import Navigation from "@/Components/Utils/Navigation";
 
-export default function Authenticated({ children }) {
+export default function Authenticated({ auth, header, children }) {
     return (
         <>
-            <Navigation Auth={true} />
+            <Navigation Auth={auth} />
             {children}
-            <Footer Auth={true} />
+            <Footer Auth={auth} />
         </>
     );
 }

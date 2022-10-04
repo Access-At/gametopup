@@ -13,9 +13,16 @@ import { Link, usePage } from "@inertiajs/inertia-react";
 export default function NavbarBottom({ Auth }) {
     const { url } = usePage();
 
+    const urlList = ["/", "/price", "/check-invoice", "/about-store", "/other"];
+    const urlListDashboard = [
+        "/dashboard/user",
+        "/dashboard/user/transaction",
+        "/dashboard/user/settings",
+    ];
+
     return (
         <div className="bg-secondry-600 fixed w-full bottom-0 p-2 block lg:hidden">
-            {!Auth && (
+            {Auth.user !== null && urlList.includes(url) && (
                 <div className="flex justify-between text-2xl md:mx-12 mx-4">
                     <Link
                         href={route("home")}
@@ -74,7 +81,7 @@ export default function NavbarBottom({ Auth }) {
                     </Link>
                 </div>
             )}
-            {Auth && (
+            {Auth.user !== null && urlListDashboard.includes(url) && (
                 <div className="flex justify-between text-2xl md:mx-12 mx-4">
                     <Link
                         href={route("users.dashboard")}

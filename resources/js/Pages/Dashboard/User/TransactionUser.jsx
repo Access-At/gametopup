@@ -1,10 +1,10 @@
 import Auth from "@/Layouts/AuthenticatedLayout";
 import TransactionUserContent from "@/Components/Dashboard/User/TransactionUserContent";
 
-export default function TransactionUser() {
+export default function TransactionUser({ auth }) {
     return (
-        <Auth>
-            <TransactionUserContent />
+        <Auth auth={auth}>
+            <TransactionUserContent Auth={auth} />
         </Auth>
     );
 }

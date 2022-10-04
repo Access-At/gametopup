@@ -8,10 +8,17 @@ import { usePage } from "@inertiajs/inertia-react";
 export default function SidebarMenu({ Auth }) {
     const { url } = usePage();
 
+    const urlList = ["/", "/price", "/check-invoice", "/about-store", "/other"];
+    const urlListDashboard = [
+        "/dashboard/user",
+        "/dashboard/user/transaction",
+        "/dashboard/user/settings",
+    ];
+
     return (
         <>
             <div className="lg:w-2/12 lg:block hidden">
-                {!Auth && (
+                {Auth.user !== null && urlList.includes(url) && (
                     <>
                         <CardSideBar
                             title="Home"
@@ -45,7 +52,7 @@ export default function SidebarMenu({ Auth }) {
                         />
                     </>
                 )}
-                {Auth && (
+                {Auth.user !== null && urlListDashboard.includes(url) && (
                     <>
                         <CardSideBar
                             title="Dashboard"
