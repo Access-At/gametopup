@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string("username");
             $table->string("email")->unique();
-            $table->string("password",20);
-            $table->string("phone_number", 15)->nullable(); 
-            $table->string("token_random",20)->nullable();
+            $table->string("password", 20);
+            $table->string("phone_number", 15)->nullable();
+            $table->string("token", 50)->nullable();
             $table->string("address")->nullable();
             $table->timestamps();
         });

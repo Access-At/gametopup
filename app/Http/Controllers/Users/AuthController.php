@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Users;
 
+use App\Models\User;
+use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
+use App\Repositories\Users\AuthRepo;
 use App\Http\Requests\AuthUser\LoginRequest;
 use App\Http\Requests\AuthUser\RegisterRequest;
-use App\Models\User;
-use App\Repositories\Users\AuthRepo;
+use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
@@ -18,6 +20,11 @@ class AuthController extends Controller
   public function login(LoginRequest $request)
   {
     (new AuthRepo)->getLogin($request);
-    return to_route('users.dashboard');
+    return redirect()->route('users.dashboard');
+  }
+  public function logout(Request $request)
+  {
+    (new AuthRepo)->sessionLogout($request);
+    return redirect()->route('home');
   }
 }

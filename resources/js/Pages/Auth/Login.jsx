@@ -18,7 +18,7 @@ export default function Login() {
                 size="lg"
                 label="Email"
                 name="email"
-                type="text"
+                type="email"
                 onChange={(e) => setData("email", e.target.value)}
                 value={data.email}
                 className="focus:ring-0"
